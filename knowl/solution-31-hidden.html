@@ -1,0 +1,59 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-01T21:03:28-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>We start our scratch-work by considering \(\abs{f(x) - (-1)} \lt  \varepsilon\text{:}\)</p>
+<div class="displaymath">
+\begin{align}
+\abs{f(x)-(-1)} \amp \lt  \varepsilon\notag\\
+\abs{x^3-2x + 1}\amp \lt  \varepsilon \amp\amp  \text{(Now factor)}\notag\\
+\abs{(x-1)(x^2+x-1)}\amp \lt  \varepsilon\notag\\
+\abs{x-1}\amp\lt\frac{\varepsilon}{\abs{x^2+x-1}}\text{.}\tag{1.2.2}
+\end{align}
+</div>
+<p>We are at the phase of saying that \(\abs{x-1}\lt\) <em class="emphasis">something</em>, where <em class="emphasis">something</em>\(=\varepsilon/\abs{x^2+x-1}\text{.}\) We want to turn that <em class="emphasis">something</em> into \(\delta\text{.}\)</p>
+<p>Since \(x\) is approaching \(1\text{,}\) we are safe to assume that \(x\) is between \(0\) and \(2\text{.}\) So</p>
+<div class="displaymath">
+\begin{align*}
+0\amp \lt  x\lt 2\\
+0\amp \lt  x^2\lt 4\amp\amp \text{(Squared each term.)}\\
+\end{align*}
+<p class="intertext">Since \(0\lt x\lt 2\text{,}\) we can add \(0\text{,}\) \(x\) and \(2\text{,}\) respectively, to each part of the inequality and maintain the inequality.</p>
+\begin{align*}
+0\amp \lt  x^2+x\lt 6\\
+-1\amp \lt  x^2+x-1\lt 5\amp\amp \text{(Subtracted 1 from each part.)}
+\end{align*}
+</div>
+<p>In <a data-knowl="./knowl/eq_lim4.html" title="Equation 1.2.2">Inequality (1.2.2)</a>, we wanted \(\abs{x-1}\lt \varepsilon/\abs{x^2+x-1}\text{.}\) The above shows that given any \(x\) in \([0,2]\text{,}\) we know that</p>
+<div class="displaymath">
+\begin{align}
+x^2+x-1 \amp \lt  5 \amp\amp \text{which implies that}\notag\\
+\frac15 \amp \lt  \frac{1}{x^2+x-1} \amp\amp \text{which implies that}\notag\\
+\frac{\varepsilon}5 \amp \lt  \frac{\varepsilon}{x^2+x-1}\amp\amp\text{.}\tag{1.2.3}
+\end{align}
+</div>
+<p>So we set \(\delta \lt \epsilon/5\text{.}\) This ends our scratch-work, and we begin the formal proof (which also helps us understand why this was a good choice of \(\delta\)).</p>
+<p>Given \(\varepsilon\text{,}\) let \(\delta \lt \varepsilon/5\text{.}\) We want to show that when \(\abs{x-1}\lt \delta\text{,}\) then \(\abs{(x^3-2x)-(-1)}\lt \varepsilon\text{.}\) We start with \(\abs{x-1}\lt \delta\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+\abs{x-1} \amp \lt  \delta\\
+\abs{x-1} \amp \lt  \frac{\varepsilon}{5}\\
+\abs{x-1} \amp \lt  \frac{\varepsilon}{\abs{x^2+x-1}} \amp\amp  \text{(}\knowl{./knowl/eq_lim5.html}{\text{Inequality (1.2.3)}}, x\text{ near 1)}\\
+\abs{x-1}\cdot \abs{x^2+x-1} \amp \lt  \varepsilon\\
+\abs{x^3-2x+1} \amp \lt  \varepsilon\\
+\abs{(x^3-2x)-(-1)} \amp \lt \varepsilon\text{,}
+\end{align*}
+</div>
+<p>which is what we wanted to show. Thus \(\lim\limits_{x\to 1}(x^3-2x) = -1\text{.}\)</p>
+</div></body>
+</html>

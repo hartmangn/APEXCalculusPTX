@@ -1,0 +1,63 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-01T21:03:28-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1.2.4.1</span>.</h6>
+<p>Let's do this example symbolically from the start. Let \(\varepsilon  \gt  0\) be given; we want \(\abs{y-4} \lt \varepsilon\text{,}\) i.e., \(\abs{x^2-4} \lt \varepsilon\text{.}\) How do we find \(\delta\) such that when \(\abs{x-2} \lt \delta\text{,}\) we are guaranteed that \(\abs{x^2-4}\lt \varepsilon\text{?}\)</p>
+<p>This is a bit trickier than the previous example, but let's start by noticing that \(\abs{x^2-4} = \abs{x-2}\cdot\abs{x+2}\text{.}\) Consider:</p>
+<div class="displaymath">
+\begin{equation*}
+\abs{x^2-4} \lt  \varepsilon \implies \abs{x-2}\cdot\abs{x+2} \lt  \varepsilon \implies \abs{x-2} \lt  \frac{\varepsilon}{\abs{x+2}}\text{.}
+\end{equation*}
+</div>
+<p>Could we not set \(\delta = \frac{\varepsilon}{\abs{x+2}}\text{?}\)</p>
+<p>We are close to an answer, but the catch is that \(\delta\) must be a <em class="emphasis">constant</em> value (so it can't depend on \(x\)). There is a way to work around this, but we do have to make an assumption. Remember that \(\varepsilon\) is supposed to be a small number, which implies that \(\delta\) will also be a small value. In particular, we can (probably) assume that \(\delta \lt 1\text{.}\) If this is true, then \(\abs{x-2} \lt \delta\) would imply that \(\abs{x-2} \lt 1\text{,}\) giving \(1 \lt x \lt 3\text{.}\)</p>
+<p>Now, back to the fraction \(\frac{\varepsilon}{\abs{x+2}}\text{.}\) If \(1\lt x\lt 3\text{,}\) then \(3\lt x+2\lt 5\) (add \(2\) to all terms in the inequality). Taking reciprocals, we have</p>
+<div class="displaymath">
+\begin{equation*}
+\frac15 \lt \frac1{\abs{x+2}} \lt  \frac 13\text{,}
+\end{equation*}
+</div>
+<p>which implies</p>
+<div class="displaymath">
+\begin{equation*}
+\frac15 \lt \frac1{\abs{x+2}}\text{,}
+\end{equation*}
+</div>
+<p>which implies</p>
+<div class="displaymath">
+\begin{equation}
+\frac{\varepsilon}{5}\lt \frac{\varepsilon}{\abs{x+2}}\text{.}\tag{1.2.1}
+\end{equation}
+</div>
+<p>This suggests that we set \(\delta \lt \frac{\varepsilon}{5}\text{.}\) To see why, let consider what follows when we assume \(\abs{x-2}\lt \delta\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+\abs{x-2}\amp\lt\delta\\
+\abs{x-2}\amp\lt\frac{\varepsilon}{5}\amp\amp\text{(Our choice of } \delta\text{)}\\
+\abs{x-2}\cdot\abs{x+2}\amp\lt\abs{x+2}\cdot\frac{\varepsilon}{5}\amp\amp\text{(Multiply by }\abs{x+2}\text{)}\\
+\abs{x^2-4}\amp\lt\abs{x+2}\cdot\frac{\varepsilon}{5}\amp\amp\text{(Simplify left side)}\\
+\abs{x^2-4}\amp\lt\abs{x+2}\cdot\frac{\varepsilon}{\abs{x+2}}\amp\amp\text{(}\knowl{./knowl/eq_limit1.html}{\text{Inequality (1.2.1)}}, \delta \lt 1\text{)}\\
+\abs{x^2-4}\amp\lt\varepsilon
+\end{align*}
+</div>
+<p>We have arrived at \(\abs{x^2-4}\lt \varepsilon\) as desired. Note again, in order to make this happen we needed \(\delta\) to first be less than \(1\text{.}\) That is a safe assumption; we want \(\varepsilon\) to be arbitrarily small, forcing \(\delta\) to also be small.</p>
+<p>We have also picked \(\delta\) to be smaller than “necessary.” We could get by with a slightly larger \(\delta\text{,}\) as shown in <a data-knowl="./knowl/fig_limit_eover5.html" title="Figure 1.2.5">Figure 1.2.5</a>. The outer lines show the boundaries defined by our choice of \(\varepsilon\text{.}\) The inner lines show the boundaries defined by setting \(\delta = \varepsilon/5\text{.}\) Note how these dotted lines are within the dashed lines. That is perfectly fine; by choosing \(x\) within the dotted lines we are guaranteed that \(f(x)\) will be within \(\varepsilon\) of \(4\text{.}\)</p>
+<figure class="figure-like"><div style="width: 47%; margin-left: 26.5%; margin-right: 26.5%;"><img src="images/img_limit_eover5.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.2.5.</span> Choosing \(\delta = \varepsilon/5\) in <a data-knowl="./knowl/ex_compute_lim2.html" title="Example 1.2.4: Evaluating a limit using the definition">Example 1.2.4</a>.</figcaption></figure><p>In summary, given \(\varepsilon  \gt  0\text{,}\) set \(\delta=\varepsilon/5\text{.}\) Then \(\abs{x-2} \lt \delta\) implies \(\abs{x^2 - 4}\lt\varepsilon\) (i.e. \(\abs{y-4}\lt\varepsilon\)) as desired. This shows that \(\lim\limits_{x\to 2} x^2 = 4\text{.}\) <a data-knowl="./knowl/fig_limit_eover5.html" title="Figure 1.2.5">Figure 1.2.5</a> gives a visualization of this; by restricting \(x\) to values within \(\delta = \varepsilon/5\) of \(2\text{,}\) we see that \(f(x)\) is within \(\varepsilon\) of \(4\text{.}\)</p>
+</div>
+<span class="incontext"><a href="sec_limit_def.html#solution-30">in-context</a></span>
+</body>
+</html>

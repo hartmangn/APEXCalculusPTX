@@ -1,0 +1,35 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-01T21:03:32-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>Let \(\varepsilon \gt 0\) be given. We wish to find \(\delta \gt 0\) such that when \(\abs{x-0}\lt\delta\text{,}\) \(\abs{f(x)-0}\lt\varepsilon\text{.}\)</p>
+<p>First, some preliminary investigation to find a suitable \(\delta\text{.}\) Consider \(\abs{f(x)-0}\lt\varepsilon\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+\abs{\sin(x)-0}\amp\lt\varepsilon\\
+\abs{\sin(x)}\amp\lt\varepsilon
+\end{align*}
+</div>
+<p>Using the hint that \(\abs{\sin(x)} \leq \abs{x}\text{,}\) then if \(\abs{x}\lt0\text{,}\) it is automatic that \(\abs{\sin(x)}\lt0\text{.}\) This suggests we take \(\delta=\varepsilon\text{.}\)</p>
+<p>Now we can apply the definition.</p>
+<div class="displaymath">
+\begin{align*}
+\abs{x-0}\amp\lt\delta\\
+\abs{x}\amp\lt\varepsilon\\
+\abs{\sin(x)}\amp\lt\varepsilon\\
+\abs{\sin(x)-0}\amp\lt\varepsilon
+\end{align*}
+</div>
+<p>In other words, \(\abs{x-0}\lt\delta\) implies \(\abs{\sin(x)-0}\lt\varepsilon\text{.}\) This is what we needed to prove.</p>
+</div></body>
+</html>

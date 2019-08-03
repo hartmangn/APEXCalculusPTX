@@ -1,0 +1,52 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-01T21:03:34-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>We begin by considering the unit circle. Each point on the unit circle has coordinates \((\cos(\theta),\sin(\theta))\) for some angle \(\theta\) as shown in <a data-knowl="./knowl/fig_squeeze_sinx.html" title="Figure 1.3.10">Figure 1.3.10</a>. Using similar triangles, we can extend the line from the origin through the point to the point \((1,\tan(\theta))\text{,}\) as shown. (Here we are assuming that \(0\leq \theta \leq \pi/2\text{.}\) Later we will show that we can also consider \(\theta \leq 0\text{.}\))</p>
+<figure class="figure-like"><div style="width: 47%; margin-left: 26.5%; margin-right: 26.5%;"><img src="images/img_squeeze_sinx.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.3.10.</span> The unit circle and related triangles.</figcaption></figure><p><a data-knowl="./knowl/fig_squeeze_sinx.html" title="Figure 1.3.10">Figure 1.3.10</a> shows three regions have been constructed in the first quadrant, two triangles and a sector of a circle, which are also drawn below. The area of the large triangle is \(\frac{1}{2}\tan(\theta)\text{;}\) the area of the sector is \(\theta/2\text{;}\) the area of the triangle contained inside the sector is \(\frac{1}{2}\sin(\theta)\text{.}\) It is then clear from <a data-knowl="./knowl/fig_squeeze1.html" title="Figure 1.3.11">Figure 1.3.11</a> that</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{\tan(\theta)}{2}\geq\frac{\theta}{2}\geq\frac{\sin(\theta)}{2}\text{.}
+\end{equation*}
+</div>
+<p>(You may need to recall that the area of a sector of a circle is \(\frac{1}{2}r^2 \theta\) with \(\theta\) measured in radians.)</p>
+<figure class="figure-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:0.666666666666667%;margin-right:0.666666666666667%;">
+<div class="sbspanel" style="width:32.4324324324324%;justify-content:flex-start;"><img src="images/img_squeeze1a.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:32.4324324324324%;justify-content:flex-start;"><img src="images/img_squeeze1b.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:32.4324324324324%;justify-content:flex-start;"><img src="images/img_squeeze1c.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.3.11.</span> Bounding the sector between two triangles</figcaption></figure><p>Multiply all terms by \(\frac{2}{\sin(\theta)}\text{,}\) giving</p>
+<div class="displaymath">
+\begin{equation*}
+\frac{1}{\cos(\theta)} \geq \frac{\theta}{\sin(\theta)} \geq 1\text{.}
+\end{equation*}
+</div>
+<p>Taking reciprocals reverses the inequalities, giving</p>
+<div class="displaymath">
+\begin{equation*}
+\cos(\theta) \leq \frac{\sin(\theta)}{\theta} \leq 1\text{.}
+\end{equation*}
+</div>
+<p>(These inequalities hold for all values of \(\theta\) near \(0\text{,}\) even negative values, since \(\cos(-\theta) = \cos(\theta)\) and \(\sin(-\theta) = -\sin(\theta)\text{.}\))</p>
+<p>Now take limits.</p>
+<div class="displaymath">
+\begin{align*}
+\lim_{\theta\to 0} \cos(\theta)\amp \leq \lim_{\theta\to 0} \frac{\sin(\theta)}{\theta} \leq \lim_{\theta\to 0}  1\\
+\cos(0) \amp\leq \lim_{\theta\to 0} \frac{\sin(\theta)}{\theta} \leq  1\\
+1\amp \leq \lim_{\theta\to 0} \frac{\sin(\theta)}{\theta} \leq  1
+\end{align*}
+</div>
+<p>Clearly this means that \(\lim\limits_{\theta\to 0} \frac{\sin(\theta)}{\theta}=1\text{.}\)</p>
+</div></body>
+</html>

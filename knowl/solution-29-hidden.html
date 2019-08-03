@@ -1,0 +1,70 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-01T21:03:27-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body><div class="solution">
+<p>Before we use the formal definition, let's try some numerical tolerances. What if the \(y\) tolerance is \(0.5\text{,}\) or in other words \(\varepsilon =0.5\text{?}\) How close to \(4\) does \(x\) have to be so that \(y\) is within \(0.5\) units of \(2\text{?}\) That is, \(1.5 \lt  y \lt  2.5\text{?}\) In this case, we can proceed as follows:</p>
+<div class="displaymath">
+\begin{align*}
+1.5 \amp\lt  y \lt  2.5\\
+1.5 \amp\lt  \sqrt{x} \lt  2.5 \amp\amp \text{ (Let } y=\sqrt{x} \text{)}\\
+1.5^2 \amp\lt  x \lt  2.5^2\amp\amp \text{(Square the inequality)}\\
+2.25  \amp\lt  x \lt  6.25\\
+2.25-4 \amp\lt  x-4 \lt  6.25-4\amp\amp \text{(Subtract }4\text{ from both sides)}\\
+-1.75 \amp\lt  x-4 \lt  2.25
+\end{align*}
+</div>
+<p>So, what is the desired \(x\) tolerance? Remember, we want to find a \(\delta\) so that \(\abs{x-4}\) is smaller than \(\delta\text{.}\) Since \(1.75\lt2.25\text{,}\) then if we require \(\abs{x-4}\lt 1.75\text{,}\) then we have</p>
+<div class="displaymath">
+\begin{align*}
+\amp\abs{x-4}\lt1.75\\
+\implies\amp-1.75\lt x-4\lt1.75\lt2.25
+\end{align*}
+</div>
+<p>Therefore we can have \(\delta \leq 1.75\text{.}\) See <a data-knowl="./knowl/fig_choose_e_d.html" title="Figure 1.2.3">Figure 1.2.3</a>.</p>
+<figure class="figure-like"><div class="sidebyside"><div class="sbsrow" style="margin-left:1.5%;margin-right:1.5%;">
+<div class="sbspanel" style="width:48.4536082474227%;justify-content:flex-start;"><img src="images/img_limit_proof1a.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:48.4536082474227%;justify-content:flex-start;"><img src="images/img_limit_proof1b.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.2.3.</span> Illustrating the \(\varepsilon-\delta\) process. With \(\varepsilon=0.5\text{,}\) we pick any \(\delta \lt  1.75\text{.}\)</figcaption></figure><p>Given the \(y\) tolerance \(\varepsilon =0.5\text{,}\) we have found an \(x\) tolerance, \(\delta \lt 1.75\text{,}\) such that whenever \(x\) is within \(\delta\) units of \(4\text{,}\) then \(y\) is within \(\varepsilon\) units of \(2\text{.}\) That's what we were trying to find.</p>
+<p>Let's try another value of \(\varepsilon\text{.}\)</p>
+<p>What if the \(y\) tolerance is \(0.01\text{,}\) i.e. \(\varepsilon =0.01\text{?}\) How close to \(4\) does \(x\) have to be in order for \(y\) to be within \(0.01\) units of \(2\text{?}\) (In other words for \(1.99 \lt  y \lt  2.01\text{?}\)) Again, we just square these values to get \(1.99^2 \lt  x \lt  2.01^2\text{,}\) or</p>
+<div class="displaymath">
+\begin{align*}
+3.9601 \amp\lt  x \lt  4.0401\\
+-0.0399\amp\lt  x-4 \lt  0.0401
+\end{align*}
+</div>
+<p>What is the desired \(x\) tolerance? In this case we must have \(\delta \lt 0.0399\text{,}\) which is the minimum distance from \(4\) of the two bounds given above.</p>
+<p>What we have so far: if \(\varepsilon =0.5\text{,}\) then \(\delta \lt 1.75\) leads to \(f(x)\) being less than \(\varepsilon\) from \(f(4)\) and if \(\varepsilon = 0.01\text{,}\) then \(\delta \lt 0.0399\) being less than \(\varepsilon\) from \(f(4)\text{.}\) A pattern is not easy to see, so we switch to general \(\varepsilon\) try to determine an adequate \(\delta\) symbolically. We start by assuming \(y=\sqrt{x}\) is within \(\varepsilon\) units of \(2\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+\amp\abs{y - 2} \lt  \varepsilon\\
+-\varepsilon \amp\lt  y - 2 \lt  \varepsilon\\
+-\varepsilon \amp\lt  \sqrt{x} - 2 \lt  \varepsilon  \amp\amp (y=\sqrt{x})\\
+2 - \varepsilon \amp\lt  \sqrt{x} \lt  2+ \varepsilon \amp\amp \text{(Add 2)}\\
+(2 - \varepsilon)^2 \amp\lt  x \lt  (2+ \varepsilon) ^2 \amp\amp \text{(Square all)}\\
+4 - 4\varepsilon + \varepsilon^2 \amp\lt  x \lt  4 + 4\varepsilon + \varepsilon^2 \amp\amp \text{(Expand)}\\
+-4\varepsilon + \varepsilon^2 \amp\lt  x-4 \lt   4\varepsilon + \varepsilon^2\amp\amp \text{(Subtract 4)}
+\end{align*}
+</div>
+<p>The “desired form” in the last step is “\(4-\textit{something} \lt  x \lt  4 + \textit{something}\text{.}\)” Since we want this last interval to describe an \(x\) tolerance around 4, we have that either \(\delta \lt  4\varepsilon - \varepsilon^2\) or \(\delta \lt  4\varepsilon + \varepsilon^2\text{,}\) whichever is smaller:</p>
+<div class="displaymath">
+\begin{equation*}
+\delta \lt \min\{4\varepsilon - \varepsilon^2, 4\varepsilon + \varepsilon^2\}\text{.}
+\end{equation*}
+</div>
+<p>Since \(\varepsilon  \gt  0\text{,}\) we have \(4\varepsilon - \varepsilon^2 \lt 4\varepsilon + \varepsilon^2\text{,}\) the minimum is \(\delta \leq 4\varepsilon - \varepsilon^2\text{.}\) That's the formula: given an \(\varepsilon\text{,}\) set \(\delta \leq 4\varepsilon-\varepsilon^2\text{.}\)</p>
+<p>We can check this for our previous values. If \(\varepsilon=0.5\text{,}\) the formula gives \(\delta \lt 4(0.5) - (0.5)^2 = 1.75\) and when \(\varepsilon=0.01\text{,}\) the formula gives \(\delta \lt 4(0.01) - (0.01)^2 = 0.399\text{.}\)</p>
+<p>So given any \(\varepsilon  \gt 0\text{,}\) set \(\delta \lt 4\varepsilon - \varepsilon^2\text{.}\) Then if \(\abs{x-4}\lt \delta\) (and \(x\neq 4\)), then \(\abs{f(x) - 2} \lt \varepsilon\text{,}\) satisfying the definition of the limit. We have shown formally (and finally!) that \(\lim\limits_{x\to 4} \sqrt{x} = 2\text{.}\)</p>
+</div></body>
+</html>

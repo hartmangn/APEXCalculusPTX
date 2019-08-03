@@ -1,0 +1,358 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-02T07:31:27-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>One-Sided Limits</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://pretextbook.org/js/lib/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.11/pretext.js"></script><script src="https://pretextbook.org/js/0.11/pretext_add_on.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/toc.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/colors_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/setcolors.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.2/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+var js_version = 0.11;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\require{cancel}\newcommand{\highlight}[1]{{\color{blue}{#1}}}
+\newcommand{\apex}{A\kern -1pt \lower -2pt\mbox{P}\kern -4pt \lower .7ex\mbox{E}\kern -1pt X}
+\newcommand{\colorlinecolor}{blue!95!black!30}
+\newcommand{\bwlinecolor}{black!30}
+\newcommand{\thelinecolor}{\colorlinecolor}
+\newcommand{\colornamesuffix}{}
+\newcommand{\linestyle}{[thick, \thelinecolor]}
+\newcommand{\bmx}[1]{\left[\hskip -3pt\begin{array}{#1} }
+\newcommand{\emx}{\end{array}\hskip -3pt\right]}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\fp}{f'}
+\newcommand{\fpp}{f''}
+
+\newcommand{\lz}[2]{\frac{d#1}{d#2}}
+\newcommand{\lzn}[3]{\frac{d^{#1}#2}{d#3^{#1}}}
+\newcommand{\lzo}[1]{\frac{d}{d#1}}
+\newcommand{\lzoo}[2]{{\frac{d}{d#1}}{\left(#2\right)}}
+\newcommand{\lzon}[2]{\frac{d^{#1}}{d#2^{#1}}}
+\newcommand{\lzoa}[3]{\left.{\frac{d#1}{d#2}}\right|_{#3}}
+\newcommand{\plz}[2]{\frac{\partial#1}{\partial#2}}
+\newcommand{\plzoa}[3]{\left.{\frac{\partial#1}{\partial#2}}\right|_{#3}}
+
+\newcommand{\inflim}[1][n]{\lim\limits_{#1 \to \infty}}
+
+\newcommand{\infser}[1][1]{\sum_{n=#1}^\infty}
+
+\newcommand{\Fp}{F\primeskip'}
+\newcommand{\Fpp}{F\primeskip''}
+\newcommand{\yp}{y\primeskip'}
+\newcommand{\gp}{g\primeskip'}
+\newcommand{\dx}{\Delta x}
+\newcommand{\dy}{\Delta y}
+\newcommand{\ddz}{\Delta z}
+\newcommand{\thet}{\theta}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\vnorm}[1]{\left\lVert\vec #1\right\rVert}
+\newcommand{\snorm}[1]{\left|\left|\ #1\ \right|\right|}
+\newcommand{\la}{\left\langle}
+\newcommand{\ra}{\right\rangle}
+\newcommand{\dotp}[2]{\vec #1 \cdot \vec #2}
+\newcommand{\proj}[2]{\text{proj}_{\,\vec #2}{\,\vec #1}}
+\newcommand{\crossp}[2]{\vec #1 \times \vec #2}
+\newcommand{\veci}{\vec i}
+\newcommand{\vecj}{\vec j}
+\newcommand{\veck}{\vec k}
+\newcommand{\vecu}{\vec u}
+\newcommand{\vecv}{\vec v}
+\newcommand{\vecw}{\vec w}
+\newcommand{\vecx}{\vec x}
+\newcommand{\vecy}{\vec y}
+\newcommand{\vrp}{\vec r\, '}
+\newcommand{\vsp}{\vec s\, '}
+\newcommand{\vrt}{\vec r(t)}
+\newcommand{\vst}{\vec s(t)}
+\newcommand{\vvt}{\vec v(t)}
+\newcommand{\vat}{\vec a(t)}
+\newcommand{\px}{\partial x}
+\newcommand{\py}{\partial y}
+\newcommand{\pz}{\partial z}
+\newcommand{\pf}{\partial f}
+\newcommand{\mathN}{\mathbb{N}}
+\newcommand{\zerooverzero}{\ds \raisebox{8pt}{\text{``\ }}\frac{0}{0}\raisebox{8pt}{\textit{ ''}}}
+\newcommand{\deriv}[2]{\myds\frac{d}{dx}\left(#1\right)=#2}
+\newcommand{\myint}[2]{\myds\int #1\ dx= {\ds #2}}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
+\newcommand{\primeskip}{\hskip.75pt}
+\newcommand{\plotlinecolor}{blue}
+\newcommand{\colorone}{blue}
+\newcommand{\colortwo}{red}
+\newcommand{\coloronefill}{blue!15!white}
+\newcommand{\colortwofill}{red!15!white}
+\newcommand{\abs}[1]{\left\lvert #1\right\rvert}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="book-1.html"><span class="title">APEX Calculus (Draft)</span></a></h1>
+<p class="byline">Gregory Hartman, Ph.D., Jennifer Bowen, Ph.D. (Editor), Alex Jordan, Ph.D. (Editor), Carly Vollet, M.S. (Editor)</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="chapter_limits.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="chapter_limits.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="backmatter-1.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="chapter_limits.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="chapter_limits.html" title="Up">Up</a><a class="next-button button toolbar-item" href="backmatter-1.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link">
+<a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1">Contributors to the \(4\)th Edition</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="chapter_limits.html" data-scroll="chapter_limits"><span class="codenumber">1</span> <span class="title">Limits</span></a><ul><li><a href="sec_limits_one_sided.html" data-scroll="sec_limits_one_sided" class="active">One-Sided Limits</a></li></ul>
+</li>
+<li class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1"><span class="title">Index</span></a></li>
+</ul></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="sec_limits_one_sided"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">One-Sided Limits</span>
+</h2>
+<a href="sec_limits_one_sided.html" class="permalink">¶</a><p id="p-7">We introduced the concept of a limit gently, approximating their values graphically and numerically. Next came the rigorous definition of the limit, along with an admittedly tedious method for evaluating them. <span>(((Unresolved xref, reference "sec_limit_analytically"; check spelling or use "provisional" attribute)))</span><a href="" class="internal" title="">Section </a> gave us tools (which we call theorems) that allow us to compute limits with greater ease. Chief among the results were the facts that polynomials and rational, trigonometric, exponential and logarithmic functions (and their sums, products, etc.) all behave “nicely.” In this section we rigorously define what we mean by “nicely.”</p>
+<p id="p-8">In <span>(((Unresolved xref, reference "sec_limit_intro"; check spelling or use "provisional" attribute)))</span><a href="" class="internal" title="">Section </a> we saw three ways in which limits of functions failed to exist:</p>
+<ol class="decimal">
+<li id="lim_DNE_lr"><p id="p-9">The function approached different values from the left and right.</p></li>
+<li id="li-2"><p id="p-10">The function grows without bound.</p></li>
+<li id="li-3"><p id="p-11">The function oscillates.</p></li>
+</ol>
+<p id="p-12">In this section we explore in depth the concepts behind <a data-knowl="./knowl/lim_DNE_lr.html" title="Item 1">Item 1</a> by introducing the <em class="emphasis">one-sided limit</em>. We begin with formal definitions that are very similar to the definition of the limit given in <span>(((Unresolved xref, reference "sec_limit_def"; check spelling or use "provisional" attribute)))</span><a href="" class="internal" title="">Section </a>, but the notation is slightly different and “\(x\neq c\)” is replaced with either “\(x\lt c\)” or “\(x \gt c\text{.}\)”</p>
+<p id="p-13">There is a slightly different definition for a left-hand limit, than for a right-hand limit, but both have a lot in common with <span>(((Unresolved xref, reference "def_limit"; check spelling or use "provisional" attribute)))</span><a href="" class="internal" title=""> </a>.</p>
+<article class="definition-like" id="def_onesidedlimit"><h6 class="heading">
+<span class="type">Definition</span> <span class="codenumber">1.1.1</span>. <span class="title">One Sided Limits: Left- and Right-Hand Limits.</span>
+</h6>
+<dl id="p-14" class="description-list-narrow">
+<dt id="li-4">Left-Hand Limit</dt>
+<dd>
+<p id="p-15">Let \(f\) be a function defined on \((a,c)\) for some \(a\lt c\) and let \(L\) be a real number. The statement that the <dfn class="terminology">limit of \(f(x)\text{,}\) as \(x\) approaches \(c\) from the left, is \(L\)</dfn>, (alternatively, that <dfn class="terminology">the left-hand limit of \(f\) at \(c\) is \(L\)</dfn>) is denoted by</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x\to c^-} f(x) = L\text{,}
+\end{equation*}
+</div>
+<p>and means that for any \(\varepsilon \gt 0\text{,}\) there exists \(\delta \gt 0\) such that for all \(x\in (a,c)\text{,}\) if \(\abs{x - c} \lt  \delta\text{,}\) then \(\abs{f(x) - L} \lt  \varepsilon\text{.}\)</p>
+</dd>
+<dt id="li-5">Right-Hand Limit</dt>
+<dd>
+<p id="p-16">Let \(f\) be a function defined on \((c,b)\) for some \(b \gt c\) and let \(L\) be a real number. The statement that the <dfn class="terminology">limit of \(f(x)\text{,}\) as \(x\) approaches \(c\) from the right, is \(L\)</dfn>, (alternatively, that <dfn class="terminology">the right-hand limit of \(f\) at \(c\) is \(L\)</dfn>) is denoted by</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x\to c^+} f(x) = L\text{,}
+\end{equation*}
+</div>
+<p>and means that for any \(\varepsilon \gt 0\text{,}\) there exists \(\delta \gt 0\) such that for all \(x\in (c,b)\text{,}\) if \(\abs{x - c} \lt  \delta\text{,}\) then \(\abs{f(x) - L} \lt  \varepsilon\text{.}\)</p>
+</dd>
+</dl></article><p id="p-17">Practically speaking, when evaluating a left-hand limit, we consider only values of \(x\) “to the left of \(c\text{,}\)” i.e., where \(x\lt c\text{.}\) The admittedly imperfect notation \(x\to c^-\) is used to imply that we look at values of \(x\) to the left of \(c\text{.}\) The notation has nothing to do with positive or negative values of either \(x\) or \(c\text{.}\) It's more like you are adding very small negative values to \(c\) to get values for \(x\text{.}\) A similar statement holds for evaluating right-hand limits; there we consider only values of \(x\) to the right of \(c\text{,}\) i.e., \(x \gt c\text{.}\) We can use the theorems from previous sections to help us evaluate these limits; we just restrict our view to one side of \(c\text{.}\)</p>
+<p id="p-18">We practice evaluating left- and right-hand limits through a series of examples.</p>
+<article class="example-like" id="ex_onesidea"><a data-knowl="" class="id-ref" data-refid="hk-ex_onesidea"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.1.2</span>. <span class="title">Evaluating one sided limits.</span>
+</h6></a></article><div id="hk-ex_onesidea" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-19">Let \(f(x) = \begin{cases}
+x \amp 0\leq x\leq 1 \\
+3-x \amp 1\lt x\lt 2
+\end{cases}\text{,}\) as shown in <a data-knowl="./knowl/fig_onesided1.html" title="Figure 1.1.3">Figure 1.1.3</a>. Find each of the following:</p>
+<ol class="decimal cols2">
+<li id="li-6"><p id="p-20">\(\lim\limits_{x\to 1^-} f(x)\)</p></li>
+<li id="li-7"><p id="p-21">\(\lim\limits_{x\to 1^+} f(x)\)</p></li>
+<li id="li-8"><p id="p-22">\(\lim\limits_{x\to 1} f(x)\)</p></li>
+<li id="li-9"><p id="p-23">\(f(1)\)</p></li>
+<li id="li-10"><p id="p-24">\(\lim\limits_{x\to 0^+} f(x)\)</p></li>
+<li id="li-11"><p id="p-25">\(f(0)\)</p></li>
+<li id="li-12"><p id="p-26">\(\lim\limits_{x\to 2^-} f(x)\)</p></li>
+<li id="li-13"><p id="p-27">\(f(2)\)</p></li>
+</ol>
+<figure class="figure-like" id="fig_onesided1"><div style="width: 47%; margin-left: 26.5%; margin-right: 26.5%;"><img src="images/img_onesided1.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.1.3.</span> A graph of \(f\) in <a data-knowl="./knowl/ex_onesidea.html" title="Example 1.1.2: Evaluating one sided limits">Example 1.1.2</a>.</figcaption></figure><div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span></a><div id="hk-solution-1" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-28">For these problems, the visual aid of the graph is likely more effective in evaluating the limits than using \(f\) itself. Therefore we will refer often to the graph.</p>
+<ol id="p-29" class="decimal">
+<li id="li-14">
+<p id="p-30">As \(x\) goes to \(1\) <em class="emphasis">from the left</em>, we see that \(f(x)\) is approaching the value of \(1\text{.}\) Therefore \(\lim\limits_{x\to 1^-} f(x) =1\text{.}\)</p>
+<p id="p-31">We could of course evaluate this limit symbolically by examining the defintion of \(f\text{.}\) Since we are approaching \(1\) from the left, we would choose the first “piece” of the function, that is the one with domain \(0 \leq x \leq 1\text{.}\) So \(\lim\limits_{x\to 1^-} x =1\text{.}\)</p>
+</li>
+<li id="li-15"><p id="p-32">As \(x\) goes to \(1\) <em class="emphasis">from the right</em>, we see that \(f(x)\) is approaching the value of \(2\text{.}\) Recall that it does not matter that there is an “open circle” there; we are evaluating a limit, not the value of the function. Therefore \(\lim\limits_{x\to 1^+} f(x)=2\text{.}\)</p></li>
+<li id="li-16"><p id="p-33"><em class="emphasis">The</em> limit of \(f\) as \(x\) approaches \(1\) does not exist, as discussed in <span>(((Unresolved xref, reference "sec_limit_intro"; check spelling or use "provisional" attribute)))</span><a href="" class="internal" title="">Section </a>. The function does not approach one particular value, but two different values from the left and the right.</p></li>
+<li id="li-17"><p id="p-34">Using the definition, and by looking at the graph, we see that \(f(1) = 1\text{.}\)</p></li>
+<li id="li-18"><p id="p-35">As \(x\) goes to \(0\) from the right, we see that \(f(x)\) is approaching \(0\text{.}\) Therefore \(\lim\limits_{x\to 0^+} f(x)=0\text{.}\) Note we cannot consider a left-hand limit at \(0\) as \(f\) is not defined for values of \(x\lt 0\text{.}\)</p></li>
+<li id="li-19"><p id="p-36">Using the definition and the graph, \(f(0) = 0\text{.}\)</p></li>
+<li id="li-20"><p id="p-37">As \(x\) goes to \(2\) from the left, we see that \(f(x)\) is approaching the value of \(1\text{.}\) Therefore \(\lim\limits_{x\to 2^-} f(x)=1\text{.}\)</p></li>
+<li id="li-21"><p id="p-38">The graph and the definition of the function show that \(f(2)\) is not defined.</p></li>
+</ol>
+</div></div>
+</div></article></div>
+<p id="p-39">Note how the left- and right-hand limits were different at \(x=1\text{.}\) This, of course, causes <em class="emphasis">the</em> limit to not exist. The following theorem states what is fairly intuitive: <em class="emphasis">the</em> limit exists precisely when the left- and right-hand limits are equal.</p>
+<article class="theorem-like" id="thm_leftrightlimits"><h6 class="heading">
+<span class="type">Theorem</span> <span class="codenumber">1.1.4</span>. <span class="title">Limits and One-Sided Limits.</span>
+</h6>
+<p id="p-40">Let \(f\) be a function defined on an open interval \(I\) containing \(c\text{.}\)  Then</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x\to c}f(x) = L
+\end{equation*}
+</div>
+<p>if, and only if,</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x\to c^-}f(x) = L  \text{ and }   \lim_{x\to c^+}f(x) = L\text{.}
+\end{equation*}
+</div></article><p id="p-41">The phrase “if, and only if” means the two statements are <em class="emphasis">equivalent</em>: they are either both true or both false. If the limit equals \(L\text{,}\) then the left and right hand limits both equal \(L\text{.}\) If the limit is not equal to \(L\text{,}\) then at least one of the left and right-hand limits is not equal to \(L\) (it may not even exist).</p>
+<p id="p-42">One thing to consider in <a data-knowl="./knowl/ex_onesidea.html" title="Example 1.1.2: Evaluating one sided limits">Examples 1.1.2</a>–<a data-knowl="./knowl/ex_onesided.html" title="Example 1.1.9: Evaluating limits of a piecewise-defined function">Example 1.1.9</a> is that the value of the function may/may not be equal to the value(s) of its left/right-hand limits, even when these limits agree.</p>
+<article class="example-like" id="ex_onesideb"><a data-knowl="" class="id-ref" data-refid="hk-ex_onesideb"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.1.5</span>. <span class="title">Evaluating limits of a piecewise-defined function.</span>
+</h6></a></article><div id="hk-ex_onesideb" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-43">Let \(f(x) =\begin{cases}
+2-x \amp 0\lt x\lt 1 \\
+(x-2)^2 \amp 1\lt x\lt 2
+\end{cases}\) as shown in <a data-knowl="./knowl/fig_onesidedb.html" title="Figure 1.1.6">Figure 1.1.6</a>. Evaluate the following:</p>
+<ol class="decimal cols2">
+<li id="li-22"><p id="p-44">\(\lim\limits_{x\to 1^-} f(x)\)</p></li>
+<li id="li-23"><p id="p-45">\(\lim\limits_{x\to 1^+} f(x)\)</p></li>
+<li id="li-24"><p id="p-46">\(\lim\limits_{x\to 1} f(x)\)</p></li>
+<li id="li-25"><p id="p-47">\(f(1)\)</p></li>
+<li id="li-26"><p id="p-48">\(\lim\limits_{x\to 0^+} f(x)\)</p></li>
+<li id="li-27"><p id="p-49">\(f(0)\)</p></li>
+<li id="li-28"><p id="p-50">\(\lim\limits_{x\to 2^-} f(x)\)</p></li>
+<li id="li-29"><p id="p-51">\(f(2)\)</p></li>
+</ol>
+<figure class="figure-like" id="fig_onesidedb"><div style="width: 47%; margin-left: 26.5%; margin-right: 26.5%;"><img src="images/img_onesidedb.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.1.6.</span> A graph of \(f\) from <a data-knowl="./knowl/ex_onesideb.html" title="Example 1.1.5: Evaluating limits of a piecewise-defined function">Example 1.1.5</a></figcaption></figure><div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span></a><div id="hk-solution-2" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-52">Again we will evaluate each using both the definition of \(f\) and its graph.</p>
+<ol id="p-53" class="decimal">
+<li id="li-30"><p id="p-54">As \(x\) approaches \(1\) from the left, we see that \(f(x)\) approaches \(1\text{.}\) Therefore \(\lim\limits_{x\to 1^-} f(x)=1\text{.}\)</p></li>
+<li id="li-31"><p id="p-55">As \(x\) approaches \(1\) from the right, we see that again \(f(x)\) approaches \(1\text{.}\) Therefore \(\lim\limits_{x\to 1+} f(x)=1\text{.}\)</p></li>
+<li id="li-32"><p id="p-56"><em class="emphasis">The</em> limit of \(f\) as \(x\) approaches \(1\) exists and is \(1\text{,}\) as \(f\) approaches \(1\) from both the right and left. Therefore \(\lim\limits_{x\to 1} f(x)=1\text{.}\)</p></li>
+<li id="li-33"><p id="p-57">\(f(1)\) is not defined. Note that \(1\) is not in the domain of \(f\) as defined by the problem, which is indicated on the graph by an open circle when \(x=1\text{.}\)</p></li>
+<li id="li-34"><p id="p-58">As \(x\) goes to \(0\) from the right, \(f(x)\) approaches \(2\text{.}\) So \(\lim\limits_{x\to 0^+} f(x)=2\text{.}\)</p></li>
+<li id="li-35"><p id="p-59">\(f(0)\) is not defined as \(0\) is not in the domain of \(f\text{.}\)</p></li>
+<li id="li-36"><p id="p-60">As \(x\) goes to \(2\) from the left, \(f(x)\) approaches \(0\text{.}\) So \(\lim\limits_{x\to 2^-} f(x)=0\text{.}\)</p></li>
+<li id="li-37"><p id="p-61">\(f(2)\) is not defined as \(2\) is not in the domain of \(f\text{.}\)</p></li>
+</ol>
+</div></div>
+</div></article></div>
+<article class="example-like" id="ex_onesidec"><a data-knowl="" class="id-ref" data-refid="hk-ex_onesidec"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.1.7</span>. <span class="title">Evaluating limits of a piecewise-defined function.</span>
+</h6></a></article><div id="hk-ex_onesidec" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-62">Let \(f(x) =\begin{cases} (x-1)^2 \amp 0\leq x\leq 2, x\neq 1\\ 1 \amp x=1
+\end{cases}\) as shown in <a data-knowl="./knowl/fig_onesidedc.html" title="Figure 1.1.8">Figure 1.1.8</a>. Evaluate the following:</p>
+<ol class="decimal cols2">
+<li id="li-38"><p id="p-63">\(\lim\limits_{x\to 1^-} f(x)\)</p></li>
+<li id="li-39"><p id="p-64">\(\lim\limits_{x\to 1^+} f(x)\)</p></li>
+<li id="li-40"><p id="p-65">\(\lim\limits_{x\to 1} f(x)\)</p></li>
+<li id="li-41"><p id="p-66">\(f(1)\)</p></li>
+</ol>
+<figure class="figure-like" id="fig_onesidedc"><div style="width: 47%; margin-left: 26.5%; margin-right: 26.5%;"><img src="images/img_onesidedc.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.1.8.</span> Graphing \(f\) in <a data-knowl="./knowl/ex_onesidec.html" title="Example 1.1.7: Evaluating limits of a piecewise-defined function">Example 1.1.7</a></figcaption></figure><div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span></a><div id="hk-solution-3" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-67">It is clear by looking at the graph that both the left- and right-hand limits of \(f\text{,}\) as \(x\) approaches \(1\text{,}\) are \(0\text{.}\) Thus it is also clear that <em class="emphasis">the</em> limit is \(0\text{;}\) i.e., \(\lim\limits_{x\to 1} f(x) = 0\text{.}\) It is also clearly stated that \(f(1) = 1\text{.}\)</p></div></div>
+</div></article></div>
+<article class="example-like" id="ex_onesided"><a data-knowl="" class="id-ref" data-refid="hk-ex_onesided"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.1.9</span>. <span class="title">Evaluating limits of a piecewise-defined function.</span>
+</h6></a></article><div id="hk-ex_onesided" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-68">Let \(f(x) = \begin{cases} x^2 \amp 0\leq x\leq 1 \\ 2-x \amp 1\lt x\leq 2
+\end{cases}\) as shown in <a data-knowl="./knowl/fig_onesidedd.html" title="Figure 1.1.10">Figure 1.1.10</a>. Evaluate the following:</p>
+<ol class="decimal cols2">
+<li id="li-42"><p id="p-69">\(\lim\limits_{x\to 1^-} f(x)\)</p></li>
+<li id="li-43"><p id="p-70">\(\lim\limits_{x\to 1^+} f(x)\)</p></li>
+<li id="li-44"><p id="p-71">\(\lim\limits_{x\to 1} f(x)\)</p></li>
+<li id="li-45"><p id="p-72">\(f(1)\)</p></li>
+</ol>
+<figure class="figure-like" id="fig_onesidedd"><div style="width: 47%; margin-left: 26.5%; margin-right: 26.5%;"><img src="images/img_onesidedd.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.1.10.</span> Graphing \(f\) in <a data-knowl="./knowl/ex_onesided.html" title="Example 1.1.9: Evaluating limits of a piecewise-defined function">Example 1.1.9</a></figcaption></figure><div class="solutions">
+<a data-knowl="" class="id-ref" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span></a><div id="hk-solution-4" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-73">It is clear from the definition of the function and its graph that all of the following are equal:</p>
+<div class="displaymath">
+\begin{equation*}
+\lim_{x\to 1^-} f(x) = \lim_{x\to 1^+} f(x) =\lim_{x\to 1} f(x) =f(1) = 1\text{.}
+\end{equation*}
+</div>
+</div></div>
+</div></article></div>
+<p id="p-74">In <a data-knowl="./knowl/ex_onesidea.html" title="Example 1.1.2: Evaluating one sided limits">Examples 1.1.2</a>–<a data-knowl="./knowl/ex_onesided.html" title="Example 1.1.9: Evaluating limits of a piecewise-defined function">Example 1.1.9</a> we were asked to find both \(\lim\limits_{x\to 1}f(x)\) and \(f(1)\text{.}\) Consider the following table:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
+<tr>
+<td class="l m b2 r0 l0 t0 lines"></td>
+<td class="l m b2 r0 l0 t0 lines">\(\lim\limits_{x\to 1}f(x)\)</td>
+<td class="l m b2 r0 l0 t0 lines">\(f(1)\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><a data-knowl="./knowl/ex_onesidea.html" title="Example 1.1.2: Evaluating one sided limits">Example 1.1.2</a></td>
+<td class="l m b0 r0 l0 t0 lines">does not exist</td>
+<td class="l m b0 r0 l0 t0 lines">\(1\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><a data-knowl="./knowl/ex_onesideb.html" title="Example 1.1.5: Evaluating limits of a piecewise-defined function">Example 1.1.5</a></td>
+<td class="l m b0 r0 l0 t0 lines">\(1\)</td>
+<td class="l m b0 r0 l0 t0 lines">not defined</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><a data-knowl="./knowl/ex_onesidec.html" title="Example 1.1.7: Evaluating limits of a piecewise-defined function">Example 1.1.7</a></td>
+<td class="l m b0 r0 l0 t0 lines">\(0\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(1\)</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines"><a data-knowl="./knowl/ex_onesided.html" title="Example 1.1.9: Evaluating limits of a piecewise-defined function">Example 1.1.9</a></td>
+<td class="l m b0 r0 l0 t0 lines">\(1\)</td>
+<td class="l m b0 r0 l0 t0 lines">\(1\)</td>
+</tr>
+</table></div></div></div>
+<p id="p-75">Only in <a data-knowl="./knowl/ex_onesided.html" title="Example 1.1.9: Evaluating limits of a piecewise-defined function">Example 1.1.9</a> do both the function and the limit exist and agree. This seems “nice;” in fact, it seems “normal.” This is in fact an important situation which we explore in <span>(((Unresolved xref, reference "sec_continuity"; check spelling or use "provisional" attribute)))</span><a href="" class="internal" title="">Section </a> entitled “Continuity.” In short, a <dfn class="terminology">continuous function</dfn> is one in which when a function approaches a value as \(x\to c\) (i.e., when \(\lim\limits_{x\to c} f(x) = L\)), it actually <em class="emphasis">attains</em> that value at \(c\text{.}\) Such functions behave nicely as they are very predictable.</p></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.11/login.js"></script>
+</body>
+</html>

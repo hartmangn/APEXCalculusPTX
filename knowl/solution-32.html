@@ -1,0 +1,58 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-01T21:03:29-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1.2.7.1</span>.</h6>
+<p>Symbolically, we want to take the inequality \(\abs{e^x - 1} \lt  \varepsilon\) and unravel it to the form \(\abs{x-0} \lt  \delta\text{.}\) Here is our scratch-work:</p>
+<div class="displaymath">
+\begin{align*}
+\amp\abs{e^x - 1}\lt  \varepsilon\\
+-\varepsilon \amp\lt  e^x - 1 \lt  \varepsilon\amp\amp \text{(Definition of absolute value)}\\
+1-\varepsilon \amp\lt  e^x \lt  1+\varepsilon \amp\amp \text{(Add 1)}\\
+\ln(1-\varepsilon) \amp\lt  x \lt  \ln(1+\varepsilon) \amp\amp \text{(Take natural logs)}
+\end{align*}
+</div>
+<p>Making the safe assumption that \(\varepsilon\lt 1\) ensures the last inequality is valid (i.e., so that \(\ln(1-\varepsilon)\) is defined). We can then set \(\delta\) to be the minimum of \(\abs{\ln(1-\varepsilon)}\) and \(\ln(1+\varepsilon)\text{;}\) i.e.,</p>
+<div class="displaymath">
+\begin{equation*}
+\delta = \min\{\abs{\ln(1-\varepsilon)}, \ln(1+\varepsilon)\} = \ln(1+\varepsilon)\text{.}
+\end{equation*}
+</div>
+<aside class="aside-like"><p><em class="emphasis">Note:</em> Recall \(\ln 1= 0\) and \(\ln x\lt 0\) when \(0\lt x\lt 1\text{.}\) So \(\ln(1-\varepsilon)\) is negative because \(1-\varepsilon\lt 1\text{;}\) hence we consider its absolute value:</p>
+<div class="displaymath">
+\begin{align*}
+\abs{\ln(1-\varepsilon)}\amp =-\ln(1-\varepsilon)\\
+\amp =\ln\left(\frac{1}{1-\varepsilon}\right)\text{.}
+\end{align*}
+</div>
+<p>To determine which is smaller between \(\abs{\ln(1-\varepsilon)}\) and \(\ln(1+\varepsilon)\) amounts to determining which is smaller between \(\frac{1}{1-\varepsilon}\) and \(1+\varepsilon\text{.}\) But \((1+\varepsilon)/\left(\frac{1}{1-\varepsilon}\right)=(1+\varepsilon)(1-\varepsilon)=1-\varepsilon^2\lt1\text{,}\) so \((1+\varepsilon)\lt\frac{1}{1-\varepsilon}\text{.}\) And therefore \(\ln(1+\varepsilon)\lt\abs{\ln(1-\varepsilon)}\text{.}\)</p></aside><p>Now, we work through the actual the proof:</p>
+<div class="displaymath">
+\begin{align*}
+\amp\abs{x - 0}\lt \delta\\
+-\delta \amp \lt  x \lt  \delta \amp\amp   \text{(Definition of absolute value)}\\
+-\ln(1+\varepsilon) \amp \lt  x \lt  \ln(1+\varepsilon)\\
+\ln(1-\varepsilon) \amp \lt  x \lt  \ln(1+\varepsilon)\text{.}\amp \amp  \text{(since \(\ln(1-\varepsilon) \lt  -\ln(1+\varepsilon)\)) }\\
+\end{align*}
+<p class="intertext">The above line is true by our choice of \(\delta\) and by the fact that since \(\abs{\ln(1-\varepsilon)} \gt \ln(1+\varepsilon)\) and \(\ln(1-\varepsilon)\lt 0\text{,}\) we know \(\ln(1-\varepsilon) \lt  -\ln(1+\varepsilon )\text{.}\)</p>
+\begin{align*}
+1-\varepsilon \amp \lt  e^x \lt  1+\varepsilon \amp \amp  \text{(Exponentiate)}\\
+-\varepsilon \amp \lt  e^x - 1 \lt  \varepsilon \amp\amp   \text{(Subtract 1)}
+\end{align*}
+</div>
+<p>In summary, given \(\varepsilon  \gt  0\text{,}\) let \(\delta = \ln(1+\varepsilon)\text{.}\) Then \(\abs{x - 0} \lt \delta\) implies \(\abs{e^x - 1}\lt \varepsilon\) as desired. We have shown that \(\lim\limits_{x\to 0} e^x = 1\text{.}\)</p>
+</div>
+<span class="incontext"><a href="sec_limit_def.html#solution-32">in-context</a></span>
+</body>
+</html>

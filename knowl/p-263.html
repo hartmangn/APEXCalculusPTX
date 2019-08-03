@@ -1,0 +1,37 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-01T21:03:30-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>First, some preliminary investigation to find a suitable \(\delta\text{.}\) Consider \(\abs{f(x)-15}\lt\varepsilon\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+\abs{\left(x^2+x-5\right)-15}\amp\lt\varepsilon\\
+\abs{x^2+x-20}\amp\lt\varepsilon\\
+\abs{x-4}\cdot\abs{x+5}\amp\lt\varepsilon\\
+\abs{x-4}\amp\lt\frac{\varepsilon}{\abs{x+5}}
+\end{align*}
+</div>
+<p>Since \(x\) is near \(4\text{,}\) we can safely assume that, for instance, \(3\lt x\lt 5\text{.}\) Thus</p>
+<div class="displaymath">
+\begin{align*}
+3+5\amp\lt x+5\lt5+5\\
+8\amp\lt x+5\lt 10\\
+\frac{1}{10}\amp\lt\frac{1}{x+5}\lt\frac{1}{8}\\
+\frac{\varepsilon}{10}\amp\lt\frac{\varepsilon}{x+5}\lt\frac{\varepsilon}{8}
+\end{align*}
+</div>
+<p>Since we need to begin the actual proof with \(\abs{x-4}\lt\delta\text{,}\) this suggests that we take \(\delta=\frac{\varepsilon}{10}\text{.}\)</p>
+<span class="incontext"><a href="sec_limit_def.html#p-263">in-context</a></span>
+</body>
+</html>

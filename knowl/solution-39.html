@@ -1,0 +1,59 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-01T21:03:31-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<div class="solution">
+<h6 class="heading">
+<span class="type">Solution</span> <span class="codenumber">1</span>.</h6>
+<p>Let \(\varepsilon  \gt 0\) be given. We wish to find \(\delta  \gt 0\) such that when \(\abs{x-1}\lt \delta\text{,}\) \(\abs{f(x)-6}\lt \varepsilon\text{.}\)</p>
+<p>First, some prelimary investigation to find a suitable \(\delta\text{.}\) Consider \(\abs{f(x)-6}\lt \varepsilon\text{,}\) keeping in mind we want to make a statement about \(\abs{x-1}\text{:}\)</p>
+<div class="displaymath">
+\begin{gather*}
+\abs{f(x) -6} \lt \varepsilon\\
+\abs{(2x^2+3x+1)-6}\lt \varepsilon\\
+\abs{2x^2+3x-5} \lt \varepsilon\\
+\abs{2x+5}\cdot\abs{x-1} \lt \varepsilon\\
+\abs{x-1} \lt  \varepsilon/\abs{2x+5}
+\end{gather*}
+</div>
+<p>Since \(x\) is near \(1\text{,}\) we can safely assume that, for instance, \(0\lt x\lt 2\text{.}\) Thus</p>
+<div class="displaymath">
+\begin{gather*}
+0+5\lt 2x+5\lt 4+5\\
+5 \lt  2x+5 \lt  9\\
+\frac{1}{9} \lt  \frac{1}{2x+5} \lt  \frac{1}{5}\\
+\frac{\varepsilon}{9} \lt  \frac{\varepsilon}{2x+5} \lt  \frac{\varepsilon}{5}
+\end{gather*}
+</div>
+<p>Let \(\delta =\frac{\varepsilon}{9}\text{.}\) Then:</p>
+<div class="displaymath">
+\begin{gather*}
+\abs{x-1}\lt \delta\\
+\abs{x-1} \lt  \frac{\varepsilon}{9}\\
+\abs{x-1} \lt  \frac{\varepsilon}{2x+5}\\
+\abs{x-1}\cdot\abs{2x+5} \lt  \frac{\epsilon}{2x+5}\cdot\abs{2x+5}
+\end{gather*}
+</div>
+<p>Assuming \(x\) is near \(1\text{,}\) \(2x+5\) is positive and we can drop the absolute value signs on the right.</p>
+<div class="displaymath">
+\begin{gather*}
+\abs{x-1}\cdot\abs{2x+5} \lt  \frac{\varepsilon}{2x+5}\cdot(2x+5)\\
+\abs{2x^2+3x-5} \lt  \varepsilon\\
+\abs{(2x^2+3x+1) -6} \lt  \varepsilon\text{,}
+\end{gather*}
+</div>
+<p>which is what we wanted to prove.</p>
+</div>
+<span class="incontext"><a href="sec_limit_def.html#solution-39">in-context</a></span>
+</body>
+</html>

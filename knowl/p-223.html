@@ -1,0 +1,30 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-08-01T21:03:29-04:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<h6 class="heading"><span class="type">Paragraph</span></h6>
+<p>Given \(\varepsilon\text{,}\) let \(\delta \lt \varepsilon/5\text{.}\) We want to show that when \(\abs{x-1}\lt \delta\text{,}\) then \(\abs{(x^3-2x)-(-1)}\lt \varepsilon\text{.}\) We start with \(\abs{x-1}\lt \delta\text{:}\)</p>
+<div class="displaymath">
+\begin{align*}
+\abs{x-1} \amp \lt  \delta\\
+\abs{x-1} \amp \lt  \frac{\varepsilon}{5}\\
+\abs{x-1} \amp \lt  \frac{\varepsilon}{\abs{x^2+x-1}} \amp\amp  \text{(}\knowl{./knowl/eq_lim5.html}{\text{Inequality (1.2.3)}}, x\text{ near 1)}\\
+\abs{x-1}\cdot \abs{x^2+x-1} \amp \lt  \varepsilon\\
+\abs{x^3-2x+1} \amp \lt  \varepsilon\\
+\abs{(x^3-2x)-(-1)} \amp \lt \varepsilon\text{,}
+\end{align*}
+</div>
+<p>which is what we wanted to show. Thus \(\lim\limits_{x\to 1}(x^3-2x) = -1\text{.}\)</p>
+<span class="incontext"><a href="sec_limit_def.html#p-223">in-context</a></span>
+</body>
+</html>
