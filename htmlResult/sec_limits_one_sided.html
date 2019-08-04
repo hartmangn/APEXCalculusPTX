@@ -1,7 +1,7 @@
 <!DOCTYPE html SYSTEM "about:legacy-compat">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-08-02T07:31:27-04:00    *-->
+<!--*    on 2019-08-03T21:01:53-04:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -260,7 +260,7 @@ x \amp 0\leq x\leq 1 \\
 </h6></a></article><div id="hk-ex_onesideb" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-43">Let \(f(x) =\begin{cases}
 2-x \amp 0\lt x\lt 1 \\
 (x-2)^2 \amp 1\lt x\lt 2
-\end{cases}\) as shown in <a data-knowl="./knowl/fig_onesidedb.html" title="Figure 1.1.6">Figure 1.1.6</a>. Evaluate the following:</p>
+\end{cases}\) .  Evaluate the following:</p>
 <ol class="decimal cols2">
 <li id="li-22"><p id="p-44">\(\lim\limits_{x\to 1^-} f(x)\)</p></li>
 <li id="li-23"><p id="p-45">\(\lim\limits_{x\to 1^+} f(x)\)</p></li>
@@ -271,50 +271,52 @@ x \amp 0\leq x\leq 1 \\
 <li id="li-28"><p id="p-50">\(\lim\limits_{x\to 2^-} f(x)\)</p></li>
 <li id="li-29"><p id="p-51">\(f(2)\)</p></li>
 </ol>
-<figure class="figure-like" id="fig_onesidedb"><div style="width: 47%; margin-left: 26.5%; margin-right: 26.5%;"><img src="images/img_onesidedb.svg" style="width: 100%; height: auto;" alt=""></div>
-<figcaption><span class="type">Figure</span> <span class="codenumber">1.1.6.</span> A graph of \(f\) from <a data-knowl="./knowl/ex_onesideb.html" title="Example 1.1.5: Evaluating limits of a piecewise-defined function">Example 1.1.5</a></figcaption></figure><div class="solutions">
+<div class="solutions">
 <a data-knowl="" class="id-ref" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span></a><div id="hk-solution-2" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-52">Again we will evaluate each using both the definition of \(f\) and its graph.</p>
+<p id="p-52">In this example, we evaluate each expression using just the definition of \(f\text{,}\) without using a graph as we did in the previous example.</p>
 <ol id="p-53" class="decimal">
-<li id="li-30"><p id="p-54">As \(x\) approaches \(1\) from the left, we see that \(f(x)\) approaches \(1\text{.}\) Therefore \(\lim\limits_{x\to 1^-} f(x)=1\text{.}\)</p></li>
-<li id="li-31"><p id="p-55">As \(x\) approaches \(1\) from the right, we see that again \(f(x)\) approaches \(1\text{.}\) Therefore \(\lim\limits_{x\to 1+} f(x)=1\text{.}\)</p></li>
+<li id="li-30"><p id="p-54">As \(x\) approaches \(1\) from the left, we consider a limit where all \(x\)-values are less than \(1\text{.}\) This means we use the \(2-x\) piece of the piecewise function \(f\) as the domain for that piece is \((0,1)\text{.}\) As the \(x\)-values near \(1\text{,}\) \(2-x\) approaches \(1\text{;}\) that is, \(f(x)\) approaches \(1\text{.}\) Therefore \(\ds \lim_{x\to 1^-} f(x)=1.\) </p></li>
+<li id="li-31"><p id="p-55">As \(x\) approaches \(1\) from the right, we consider a limit where all \(x\)-values are greater than \(1\text{.}\) This means we use the \((x-2)^2\) piece of \(f\) as the domain for that piece is \((1,2)\text{.}\) As the \(x\)-values near \(1\text{,}\) \((x-2)^2\) approaches \(1\text{;}\) that is, we see that again \(f(x)\) approaches \(1\text{.}\) Therefore \(\ds \lim_{x\to 1+} f(x)=1\text{.}\) </p></li>
 <li id="li-32"><p id="p-56"><em class="emphasis">The</em> limit of \(f\) as \(x\) approaches \(1\) exists and is \(1\text{,}\) as \(f\) approaches \(1\) from both the right and left. Therefore \(\lim\limits_{x\to 1} f(x)=1\text{.}\)</p></li>
-<li id="li-33"><p id="p-57">\(f(1)\) is not defined. Note that \(1\) is not in the domain of \(f\) as defined by the problem, which is indicated on the graph by an open circle when \(x=1\text{.}\)</p></li>
-<li id="li-34"><p id="p-58">As \(x\) goes to \(0\) from the right, \(f(x)\) approaches \(2\text{.}\) So \(\lim\limits_{x\to 0^+} f(x)=2\text{.}\)</p></li>
+<li id="li-33"><p id="p-57">Neither piece of \(f\) is defined for the \(x\)-value of \(1\text{;}\) in other words, \(1\) is not in the domain of \(f\text{.}\) Therefore \(f(1)\) is not defined. </p></li>
+<li id="li-34"><p id="p-58">As \(x\) approaches  \(0\) from the right, we consider a limit where all \(x\)-values are greater than \(0\text{.}\) This means we use the \(2-x\) piece of \(f\text{.}\) As the \(x\)-values near \(0\text{,}\) \(2-x\) approaches \(2\text{;}\) that is, \(f(x)\) approaches \(2\text{.}\) So \(\ds \lim_{x\to 0^+} f(x)=2\text{.}\) </p></li>
 <li id="li-35"><p id="p-59">\(f(0)\) is not defined as \(0\) is not in the domain of \(f\text{.}\)</p></li>
-<li id="li-36"><p id="p-60">As \(x\) goes to \(2\) from the left, \(f(x)\) approaches \(0\text{.}\) So \(\lim\limits_{x\to 2^-} f(x)=0\text{.}\)</p></li>
+<li id="li-36"><p id="p-60">As \(x\) approaches  \(2\) from the left, we consider a limit where all \(x\)-values are less than \(2\text{.}\) This means we use the \((x-2)^2\) piece of \(f\text{.}\) As the \(x\)-values near \(2\text{,}\) \((x-2)^2\) nears \(0\text{;}\) that is, \(f(x)\) approaches \(0\text{.}\) So \(\ds \lim_{x\to 2^-} f(x)=0\text{.}\) </p></li>
 <li id="li-37"><p id="p-61">\(f(2)\) is not defined as \(2\) is not in the domain of \(f\text{.}\)</p></li>
 </ol>
+<p id="p-62">We can confirm our analytic result by consulting the graph of \(f\) shown in <a data-knowl="./knowl/fig_onesidedb.html" title="Figure 1.1.6">Figure 1.1.6</a>.	Note the open circles on the graph at \(x=0\text{,}\) \(1\) and \(2\text{,}\) where \(f\) is not defined.</p>
+<figure class="figure-like" id="fig_onesidedb"><div style="width: 47%; margin-left: 26.5%; margin-right: 26.5%;"><img src="images/img_onesidedb.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figure</span> <span class="codenumber">1.1.6.</span> A graph of \(f\) from <a data-knowl="./knowl/ex_onesideb.html" title="Example 1.1.5: Evaluating limits of a piecewise-defined function">Example 1.1.5</a></figcaption></figure>
 </div></div>
 </div></article></div>
 <article class="example-like" id="ex_onesidec"><a data-knowl="" class="id-ref" data-refid="hk-ex_onesidec"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">1.1.7</span>. <span class="title">Evaluating limits of a piecewise-defined function.</span>
-</h6></a></article><div id="hk-ex_onesidec" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-62">Let \(f(x) =\begin{cases} (x-1)^2 \amp 0\leq x\leq 2, x\neq 1\\ 1 \amp x=1
+</h6></a></article><div id="hk-ex_onesidec" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-63">Let \(f(x) =\begin{cases} (x-1)^2 \amp 0\leq x\leq 2, x\neq 1\\ 1 \amp x=1
 \end{cases}\) as shown in <a data-knowl="./knowl/fig_onesidedc.html" title="Figure 1.1.8">Figure 1.1.8</a>. Evaluate the following:</p>
 <ol class="decimal cols2">
-<li id="li-38"><p id="p-63">\(\lim\limits_{x\to 1^-} f(x)\)</p></li>
-<li id="li-39"><p id="p-64">\(\lim\limits_{x\to 1^+} f(x)\)</p></li>
-<li id="li-40"><p id="p-65">\(\lim\limits_{x\to 1} f(x)\)</p></li>
-<li id="li-41"><p id="p-66">\(f(1)\)</p></li>
+<li id="li-38"><p id="p-64">\(\lim\limits_{x\to 1^-} f(x)\)</p></li>
+<li id="li-39"><p id="p-65">\(\lim\limits_{x\to 1^+} f(x)\)</p></li>
+<li id="li-40"><p id="p-66">\(\lim\limits_{x\to 1} f(x)\)</p></li>
+<li id="li-41"><p id="p-67">\(f(1)\)</p></li>
 </ol>
 <figure class="figure-like" id="fig_onesidedc"><div style="width: 47%; margin-left: 26.5%; margin-right: 26.5%;"><img src="images/img_onesidedc.svg" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span> <span class="codenumber">1.1.8.</span> Graphing \(f\) in <a data-knowl="./knowl/ex_onesidec.html" title="Example 1.1.7: Evaluating limits of a piecewise-defined function">Example 1.1.7</a></figcaption></figure><div class="solutions">
-<a data-knowl="" class="id-ref" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span></a><div id="hk-solution-3" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-67">It is clear by looking at the graph that both the left- and right-hand limits of \(f\text{,}\) as \(x\) approaches \(1\text{,}\) are \(0\text{.}\) Thus it is also clear that <em class="emphasis">the</em> limit is \(0\text{;}\) i.e., \(\lim\limits_{x\to 1} f(x) = 0\text{.}\) It is also clearly stated that \(f(1) = 1\text{.}\)</p></div></div>
+<a data-knowl="" class="id-ref" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span></a><div id="hk-solution-3" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-68">It is clear by looking at the graph that both the left- and right-hand limits of \(f\text{,}\) as \(x\) approaches \(1\text{,}\) are \(0\text{.}\) Thus it is also clear that <em class="emphasis">the</em> limit is \(0\text{;}\) i.e., \(\lim\limits_{x\to 1} f(x) = 0\text{.}\) It is also clearly stated that \(f(1) = 1\text{.}\)</p></div></div>
 </div></article></div>
 <article class="example-like" id="ex_onesided"><a data-knowl="" class="id-ref" data-refid="hk-ex_onesided"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">1.1.9</span>. <span class="title">Evaluating limits of a piecewise-defined function.</span>
-</h6></a></article><div id="hk-ex_onesided" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-68">Let \(f(x) = \begin{cases} x^2 \amp 0\leq x\leq 1 \\ 2-x \amp 1\lt x\leq 2
+</h6></a></article><div id="hk-ex_onesided" class="hidden-content tex2jax_ignore"><article class="example-like"><p id="p-69">Let \(f(x) = \begin{cases} x^2 \amp 0\leq x\leq 1 \\ 2-x \amp 1\lt x\leq 2
 \end{cases}\) as shown in <a data-knowl="./knowl/fig_onesidedd.html" title="Figure 1.1.10">Figure 1.1.10</a>. Evaluate the following:</p>
 <ol class="decimal cols2">
-<li id="li-42"><p id="p-69">\(\lim\limits_{x\to 1^-} f(x)\)</p></li>
-<li id="li-43"><p id="p-70">\(\lim\limits_{x\to 1^+} f(x)\)</p></li>
-<li id="li-44"><p id="p-71">\(\lim\limits_{x\to 1} f(x)\)</p></li>
-<li id="li-45"><p id="p-72">\(f(1)\)</p></li>
+<li id="li-42"><p id="p-70">\(\lim\limits_{x\to 1^-} f(x)\)</p></li>
+<li id="li-43"><p id="p-71">\(\lim\limits_{x\to 1^+} f(x)\)</p></li>
+<li id="li-44"><p id="p-72">\(\lim\limits_{x\to 1} f(x)\)</p></li>
+<li id="li-45"><p id="p-73">\(f(1)\)</p></li>
 </ol>
 <figure class="figure-like" id="fig_onesidedd"><div style="width: 47%; margin-left: 26.5%; margin-right: 26.5%;"><img src="images/img_onesidedd.svg" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figure</span> <span class="codenumber">1.1.10.</span> Graphing \(f\) in <a data-knowl="./knowl/ex_onesided.html" title="Example 1.1.9: Evaluating limits of a piecewise-defined function">Example 1.1.9</a></figcaption></figure><div class="solutions">
 <a data-knowl="" class="id-ref" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span></a><div id="hk-solution-4" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-73">It is clear from the definition of the function and its graph that all of the following are equal:</p>
+<p id="p-74">It is clear from the definition of the function and its graph that all of the following are equal:</p>
 <div class="displaymath">
 \begin{equation*}
 \lim_{x\to 1^-} f(x) = \lim_{x\to 1^+} f(x) =\lim_{x\to 1} f(x) =f(1) = 1\text{.}
@@ -322,7 +324,7 @@ x \amp 0\leq x\leq 1 \\
 </div>
 </div></div>
 </div></article></div>
-<p id="p-74">In <a data-knowl="./knowl/ex_onesidea.html" title="Example 1.1.2: Evaluating one sided limits">Examples 1.1.2</a>–<a data-knowl="./knowl/ex_onesided.html" title="Example 1.1.9: Evaluating limits of a piecewise-defined function">Example 1.1.9</a> we were asked to find both \(\lim\limits_{x\to 1}f(x)\) and \(f(1)\text{.}\) Consider the following table:</p>
+<p id="p-75">In <a data-knowl="./knowl/ex_onesidea.html" title="Example 1.1.2: Evaluating one sided limits">Examples 1.1.2</a>–<a data-knowl="./knowl/ex_onesided.html" title="Example 1.1.9: Evaluating limits of a piecewise-defined function">Example 1.1.9</a> we were asked to find both \(\lim\limits_{x\to 1}f(x)\) and \(f(1)\text{.}\) Consider the following table:</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel fixed-width" style="width:100%;justify-content:flex-start;"><table>
 <tr>
 <td class="l m b2 r0 l0 t0 lines"></td>
@@ -350,7 +352,7 @@ x \amp 0\leq x\leq 1 \\
 <td class="l m b0 r0 l0 t0 lines">\(1\)</td>
 </tr>
 </table></div></div></div>
-<p id="p-75">Only in <a data-knowl="./knowl/ex_onesided.html" title="Example 1.1.9: Evaluating limits of a piecewise-defined function">Example 1.1.9</a> do both the function and the limit exist and agree. This seems “nice;” in fact, it seems “normal.” This is in fact an important situation which we explore in <span>(((Unresolved xref, reference "sec_continuity"; check spelling or use "provisional" attribute)))</span><a href="" class="internal" title="">Section </a> entitled “Continuity.” In short, a <dfn class="terminology">continuous function</dfn> is one in which when a function approaches a value as \(x\to c\) (i.e., when \(\lim\limits_{x\to c} f(x) = L\)), it actually <em class="emphasis">attains</em> that value at \(c\text{.}\) Such functions behave nicely as they are very predictable.</p></section></div></main>
+<p id="p-76">Only in <a data-knowl="./knowl/ex_onesided.html" title="Example 1.1.9: Evaluating limits of a piecewise-defined function">Example 1.1.9</a> do both the function and the limit exist and agree. This seems “nice;” in fact, it seems “normal.” This is in fact an important situation which we explore in <span>(((Unresolved xref, reference "sec_continuity"; check spelling or use "provisional" attribute)))</span><a href="" class="internal" title="">Section </a> entitled “Continuity.” In short, a <dfn class="terminology">continuous function</dfn> is one in which when a function approaches a value as \(x\to c\) (i.e., when \(\lim\limits_{x\to c} f(x) = L\)), it actually <em class="emphasis">attains</em> that value at \(c\text{.}\) Such functions behave nicely as they are very predictable.</p></section></div></main>
 </div>
 <div class="login-link"><span id="loginlogout" class="login">login</span></div>
 <script src="https://pretextbook.org/js/0.11/login.js"></script>
